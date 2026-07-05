@@ -1,0 +1,245 @@
+{
+  "cursors": {
+    "1473232293219926172": {
+      "lastMessageId": "1522842385661296773",
+      "lastRunAt": "2026-07-04T08:52:22.064Z"
+    },
+    "1473232475420491937": {
+      "lastMessageId": "1522734608725184552",
+      "lastRunAt": "2026-07-04T08:52:22.064Z"
+    }
+  },
+  "pendingProposals": [
+    {
+      "id": "28e81fa5-cf9d-4246-9709-9ce76b26d937",
+      "discordMessageId": "1521807900434239523",
+      "channelId": "1473232475420491937",
+      "bug": {
+        "title": "Ship vendor appears during warp incursion battles",
+        "summary": "In Fleet Guard 0.1.1 the ship vendor NPC appears on the ship during warp incursion battles.",
+        "description": "Fleet Guard 0.1.1 minor gameplay bug: the ship vendor appears in warp incursion battles on the ship. Redusk38 noted he had gotten so used to the vendor always being there that he forgot it wasn't intended. (Vesper jokingly said it's cool enough to be a feature.)",
+        "severity": "low",
+        "area": "Fleet Guard/vendor",
+        "sourceMessageIds": [
+          "1521315618798702622",
+          "1521315774936121364"
+        ],
+        "sourceMessages": [],
+        "reporters": [
+          "292769629653434369"
+        ]
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-01T09:21:18.381Z"
+    },
+    {
+      "id": "927dd6a2-df29-4bd2-8ab1-698098ab58f4",
+      "discordMessageId": "1522887603639029780",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Save corruption / error when updating from older beta versions of Bodyguard mod",
+        "summary": "Loading a save created on an older beta version (e.g. v0.12.5/0.12.6) into the current v0.13 merged version produces an error, and updating causes save corruption requiring a new game start.",
+        "description": "When switching from a previous beta version of the Bodyguard mod to the current merged v0.13 version, loading an existing save produces an error. undead426 reported that even after fully clearing the modfinder cache and uninstalling/reinstalling the mod, the error still occurs when carrying over a save from the old beta.\n\nRedusk38 acknowledged this is a known issue, stating it would be added to the list: updating from old versions causes save corruption, so a new game start is required. This primarily affects users who were testing the older beta branch (which was listed separately as \"bodyguard\" vs the current \"bodyguards\"), since the versions were recently merged back into one.\n\nAffected versions: upgrading from ~v0.12.5/0.12.6 to v0.13.0.\n\nNote: A separate confusion where the mod appeared broken turned out to be user error (the mod had simply been left disabled) and is not part of this bug.",
+        "stepsToReproduce": [
+          "Have a save created on an older beta version of the Bodyguard mod (e.g. v0.12.5/0.12.6)",
+          "Update/switch to the current merged v0.13 version (optionally uninstall/reinstall and clear modfinder cache)",
+          "Load the existing save",
+          "Observe the error / save corruption"
+        ],
+        "severity": "medium",
+        "area": "save/mod versioning",
+        "sourceMessageIds": [
+          "1522700755142836275",
+          "1522701109620113540",
+          "1522701119883575306",
+          "1522701338377457715",
+          "1522701416664141895",
+          "1522701546364735558",
+          "1522701685804499135"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1522700755142836275",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T20:29:10.438000+00:00",
+            "content": "Ok so even complete clear of cache it still gives the error if switching from previous beta to the current good one. Not a problem"
+          },
+          {
+            "id": "1522701109620113540",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T20:30:34.952000+00:00",
+            "content": "Makes sense since it did it before when we started with the beta"
+          },
+          {
+            "id": "1522701119883575306",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-03T20:30:37.399000+00:00",
+            "content": "ok so last test ver you were on was?"
+          },
+          {
+            "id": "1522701338377457715",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T20:31:29.492000+00:00",
+            "content": "I belive .125"
+          },
+          {
+            "id": "1522701416664141895",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T20:31:48.157000+00:00",
+            "content": "Or .126"
+          },
+          {
+            "id": "1522701546364735558",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-03T20:32:19.080000+00:00",
+            "content": "Will add it to the list that updating from old versions causes some save corruption\nso new game starts is required"
+          },
+          {
+            "id": "1522701685804499135",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T20:32:52.325000+00:00",
+            "content": "Yea like I said shouldn't be problem for most since most weren't not testing the beta like we were"
+          }
+        ],
+        "reporters": [
+          "309504210662195200"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-04T08:51:39.404Z"
+    },
+    {
+      "id": "0b73db4b-66c3-414f-94eb-63736b46b941",
+      "discordMessageId": "1522887779065921586",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Guardsmen fail to follow player into Von Valancius Estate / disappear after simulation loop",
+        "summary": "Recruited Guardsmen do not follow the player through a teleport into the Von Valancius Estate DLC area, and disappear again if the player loops in the simulation.",
+        "description": "In version 12.6, Guardsmen follow the player through the entire Museum right up until reaching the Von Valancius Estate and its subsequent fight with the Merovian Guardsmen. There appears to be a teleport somewhere that the guards do not follow through — they are not in the turn order or otherwise present.\n\nAfter restarting the game, the guards reappeared. However, if the player ||loops in the simulation||, they disappear again.\n\nAnother user (undead426) confirmed this was a bug in 12.6 but has not been able to verify whether it is fixed in version 13, as the affected area is in Act 4 and difficult to reach on a new run without saves.",
+        "stepsToReproduce": [
+          "Progress through the Museum with Guardsmen following you",
+          "Reach the teleport/transition into the Von Valancius Estate area",
+          "Observe that guards do not follow through and are absent from the turn order",
+          "Alternatively, loop in the simulation and observe guards disappear again"
+        ],
+        "severity": "medium",
+        "area": "guards",
+        "sourceMessageIds": [
+          "1522688924831711343",
+          "1522697252588617728",
+          "1522697530431770714",
+          "1522697550967078985",
+          "1522719570597642250",
+          "1522725947361726514",
+          "1522725953627754588",
+          "1522726004953448538",
+          "1522728191020765205",
+          "1522734222610137309"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1522688924831711343",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T19:42:09.872000+00:00",
+            "content": "||Still on 12.6 but Guardsmen follow you through the entire Museum right up until you get to the Von Valancius Estate and its subsequent fight with the Merovian Guardsmen||\nBug report for guards not following you into a DLC area when they definitely should.",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232475420491937/1522688924210823380/image.png?ex=6a4a0ad1&is=6a48b951&hm=fa9016cd41cc94d793a59d6522b9d78278448e408a85138e45afe2807379ee87&",
+                "filename": "image.png",
+                "contentType": "image/png"
+              }
+            ]
+          },
+          {
+            "id": "1522697252588617728",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-03T20:15:15.364000+00:00",
+            "content": "Is that In combat they are not moving or in general that they are not moving into the area?"
+          },
+          {
+            "id": "1522697530431770714",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T20:16:21.607000+00:00",
+            "content": "I think there's a teleport somewhere and they simply don't follow"
+          },
+          {
+            "id": "1522697550967078985",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T20:16:26.503000+00:00",
+            "content": "They're not in the turn order or anything"
+          },
+          {
+            "id": "1522719570597642250",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T21:43:56.392000+00:00",
+            "content": "Update on this, after restarting my game they are now here."
+          },
+          {
+            "id": "1522725947361726514",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T22:09:16.731000+00:00",
+            "content": "Yeah"
+          },
+          {
+            "id": "1522725953627754588",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T22:09:18.225000+00:00",
+            "content": "Actually"
+          },
+          {
+            "id": "1522726004953448538",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-03T22:09:30.462000+00:00",
+            "content": "If you ||loop in the simulation|| they disappear again."
+          },
+          {
+            "id": "1522728191020765205",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T22:18:11.661000+00:00",
+            "content": "Yep that was a bug in 12.6 for sure. Havent tried on newest update to see if it got fixed in 13 since not there now"
+          },
+          {
+            "id": "1522734222610137309",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-03T22:42:09.704000+00:00",
+            "content": "Unfortunately that area is act 4 so getting to it on new run is not quick and I have no saves there."
+          }
+        ],
+        "reporters": [
+          "830240204064424008",
+          "309504210662195200"
+        ],
+        "sourceChannelId": "1473232475420491937"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-04T08:52:21.490Z"
+    }
+  ]
+}
