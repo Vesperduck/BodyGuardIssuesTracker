@@ -1,118 +1,64 @@
 {
   "cursors": {
     "1473232293219926172": {
-      "lastMessageId": "1522842385661296773",
-      "lastRunAt": "2026-07-04T08:52:22.064Z"
+      "lastMessageId": "1524674005649588274",
+      "lastRunAt": "2026-07-09T09:10:22.744Z"
     },
     "1473232475420491937": {
-      "lastMessageId": "1522734608725184552",
-      "lastRunAt": "2026-07-04T08:52:22.064Z"
+      "lastMessageId": "1523935911329534012",
+      "lastRunAt": "2026-07-09T09:10:22.744Z"
     }
   },
   "pendingProposals": [
     {
-      "id": "28e81fa5-cf9d-4246-9709-9ce76b26d937",
-      "discordMessageId": "1521807900434239523",
-      "channelId": "1473232475420491937",
-      "bug": {
-        "title": "Ship vendor appears during warp incursion battles",
-        "summary": "In Fleet Guard 0.1.1 the ship vendor NPC appears on the ship during warp incursion battles.",
-        "description": "Fleet Guard 0.1.1 minor gameplay bug: the ship vendor appears in warp incursion battles on the ship. Redusk38 noted he had gotten so used to the vendor always being there that he forgot it wasn't intended. (Vesper jokingly said it's cool enough to be a feature.)",
-        "severity": "low",
-        "area": "Fleet Guard/vendor",
-        "sourceMessageIds": [
-          "1521315618798702622",
-          "1521315774936121364"
-        ],
-        "sourceMessages": [],
-        "reporters": [
-          "292769629653434369"
-        ]
-      },
-      "action": {
-        "kind": "create"
-      },
-      "state": "pending",
-      "proposedAt": "2026-07-01T09:21:18.381Z"
-    },
-    {
-      "id": "927dd6a2-df29-4bd2-8ab1-698098ab58f4",
-      "discordMessageId": "1522887603639029780",
+      "id": "0ba610c5-d57d-4a6e-8352-01b0f2e03e79",
+      "discordMessageId": "1524703893035159673",
       "channelId": "1522016010603860141",
       "bug": {
-        "title": "Save corruption / error when updating from older beta versions of Bodyguard mod",
-        "summary": "Loading a save created on an older beta version (e.g. v0.12.5/0.12.6) into the current v0.13 merged version produces an error, and updating causes save corruption requiring a new game start.",
-        "description": "When switching from a previous beta version of the Bodyguard mod to the current merged v0.13 version, loading an existing save produces an error. undead426 reported that even after fully clearing the modfinder cache and uninstalling/reinstalling the mod, the error still occurs when carrying over a save from the old beta.\n\nRedusk38 acknowledged this is a known issue, stating it would be added to the list: updating from old versions causes save corruption, so a new game start is required. This primarily affects users who were testing the older beta branch (which was listed separately as \"bodyguard\" vs the current \"bodyguards\"), since the versions were recently merged back into one.\n\nAffected versions: upgrading from ~v0.12.5/0.12.6 to v0.13.0.\n\nNote: A separate confusion where the mod appeared broken turned out to be user error (the mod had simply been left disabled) and is not part of this bug.",
+        "title": "Guards fail to move into range at start of long-distance combat encounters",
+        "summary": "Bodyguards remain in their starting positions and only spam skills instead of advancing to attack when a fight begins at long range.",
+        "description": "In combat encounters that begin at great distances, the guards sit in their starting position and spam skills without moving into range to attack the enemy. If an enemy moves closer they begin to move to cover (if possible) and attack. Observed at the start of the Palace of Justice fight where guards stayed put and did not react/move even when a large melta cannon shot near them.\n\nReported against Bodyguard v0.13.0.5. The AI combat detection range needs tweaking so guards will engage distant enemies.",
         "stepsToReproduce": [
-          "Have a save created on an older beta version of the Bodyguard mod (e.g. v0.12.5/0.12.6)",
-          "Update/switch to the current merged v0.13 version (optionally uninstall/reinstall and clear modfinder cache)",
-          "Load the existing save",
-          "Observe the error / save corruption"
+          "Enter a combat encounter that starts with enemies at long range",
+          "Observe guards remain in starting position spamming skills without advancing"
         ],
         "severity": "medium",
-        "area": "save/mod versioning",
+        "area": "guards/AI",
         "sourceMessageIds": [
-          "1522700755142836275",
-          "1522701109620113540",
-          "1522701119883575306",
-          "1522701338377457715",
-          "1522701416664141895",
-          "1522701546364735558",
-          "1522701685804499135"
+          "1523101035407741089",
+          "1524391785902768308"
         ],
         "sourceMessages": [
           {
-            "id": "1522700755142836275",
+            "id": "1523101035407741089",
             "authorId": "309504210662195200",
             "authorName": "undead426",
-            "createdAt": "2026-07-03T20:29:10.438000+00:00",
-            "content": "Ok so even complete clear of cache it still gives the error if switching from previous beta to the current good one. Not a problem"
+            "createdAt": "2026-07-04T22:59:44.690000+00:00",
+            "content": "At beginning of fight in the palace of justice the guards stayed where they were i could move them back if i wanted but it was interesting they didnt move when massive melta cannon shot at the thing behind them lol",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523101034216558656/rn_image_picker_lib_temp_e87b3142-aca3-4d29-a108-cc1bba67d0f5.jpg?ex=6a5027e0&is=6a4ed660&hm=0b7a5f41e954e966dcdaf40b6043e119f371ab8b5f4df375bf41f0d7395420d2&",
+                "filename": "rn_image_picker_lib_temp_e87b3142-aca3-4d29-a108-cc1bba67d0f5.jpg",
+                "contentType": "image/jpeg"
+              },
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523101034946363433/rn_image_picker_lib_temp_73735c63-1953-49a6-8557-824e53ca472e.jpg?ex=6a5027e0&is=6a4ed660&hm=7a23e44e25272a6b560850c6c31c2174da836af83d40b5d479cd2d8833fe3c08&",
+                "filename": "rn_image_picker_lib_temp_73735c63-1953-49a6-8557-824e53ca472e.jpg",
+                "contentType": "image/jpeg"
+              }
+            ]
           },
           {
-            "id": "1522701109620113540",
-            "authorId": "309504210662195200",
-            "authorName": "undead426",
-            "createdAt": "2026-07-03T20:30:34.952000+00:00",
-            "content": "Makes sense since it did it before when we started with the beta"
-          },
-          {
-            "id": "1522701119883575306",
+            "id": "1524391785902768308",
             "authorId": "292769629653434369",
             "authorName": "Redusk38",
-            "createdAt": "2026-07-03T20:30:37.399000+00:00",
-            "content": "ok so last test ver you were on was?"
-          },
-          {
-            "id": "1522701338377457715",
-            "authorId": "309504210662195200",
-            "authorName": "undead426",
-            "createdAt": "2026-07-03T20:31:29.492000+00:00",
-            "content": "I belive .125"
-          },
-          {
-            "id": "1522701416664141895",
-            "authorId": "309504210662195200",
-            "authorName": "undead426",
-            "createdAt": "2026-07-03T20:31:48.157000+00:00",
-            "content": "Or .126"
-          },
-          {
-            "id": "1522701546364735558",
-            "authorId": "292769629653434369",
-            "authorName": "Redusk38",
-            "createdAt": "2026-07-03T20:32:19.080000+00:00",
-            "content": "Will add it to the list that updating from old versions causes some save corruption\nso new game starts is required"
-          },
-          {
-            "id": "1522701685804499135",
-            "authorId": "309504210662195200",
-            "authorName": "undead426",
-            "createdAt": "2026-07-03T20:32:52.325000+00:00",
-            "content": "Yea like I said shouldn't be problem for most since most weren't not testing the beta like we were"
+            "createdAt": "2026-07-08T12:28:43.589000+00:00",
+            "content": "Bodyguard v0.13.0.5\nGameplay\n\n* AI combat detection range needs some tweaking.\nCertain combat encounters start at great distances\nThe guards will sit in their starting position and spam skills without moving into range to attack the enemy.\n\nIf an enemy moves closer they begin to move positions to cover (IF possible) and attack."
           }
         ],
         "reporters": [
-          "309504210662195200"
+          "309504210662195200",
+          "292769629653434369"
         ],
         "sourceChannelId": "1473232293219926172"
       },
@@ -120,126 +66,870 @@
         "kind": "create"
       },
       "state": "pending",
-      "proposedAt": "2026-07-04T08:51:39.404Z"
+      "proposedAt": "2026-07-09T09:08:56.446Z"
     },
     {
-      "id": "0b73db4b-66c3-414f-94eb-63736b46b941",
-      "discordMessageId": "1522887779065921586",
+      "id": "619be96e-98e9-48da-a762-7a6bebe1a8a1",
+      "discordMessageId": "1524703922974101504",
       "channelId": "1522016010603860141",
       "bug": {
-        "title": "Guardsmen fail to follow player into Von Valancius Estate / disappear after simulation loop",
-        "summary": "Recruited Guardsmen do not follow the player through a teleport into the Von Valancius Estate DLC area, and disappear again if the player loops in the simulation.",
-        "description": "In version 12.6, Guardsmen follow the player through the entire Museum right up until reaching the Von Valancius Estate and its subsequent fight with the Merovian Guardsmen. There appears to be a teleport somewhere that the guards do not follow through — they are not in the turn order or otherwise present.\n\nAfter restarting the game, the guards reappeared. However, if the player ||loops in the simulation||, they disappear again.\n\nAnother user (undead426) confirmed this was a bug in 12.6 but has not been able to verify whether it is fixed in version 13, as the affected area is in Act 4 and difficult to reach on a new run without saves.",
+        "title": "Replacement guards inserted at wrong position in roster order",
+        "summary": "When guards die and are replaced, the new recruits are placed randomly in the roster/personnel order rather than after the last living guard.",
+        "description": "Guards are still getting randomly placed in roster order when replacements spawn after deaths. Ideally new recruits should appear after the last living guard to make them easier to track. Verified with renamed/numbered guards: after retiring several guards via daemon incursion, replacement no.1 stayed in the same place while replacements 3 & 4 were slotted between 5 & 6. The roster view also always opens on the same guard (v2, the second to appear) rather than the prologue guard.\n\nThe separate loadout part of this issue (replacements now spawn with assault las rifles as default) was fixed; the random ordering remains outstanding.",
         "stepsToReproduce": [
-          "Progress through the Museum with Guardsmen following you",
-          "Reach the teleport/transition into the Von Valancius Estate area",
-          "Observe that guards do not follow through and are absent from the turn order",
-          "Alternatively, loop in the simulation and observe guards disappear again"
+          "Have several guards die and be replaced",
+          "Open the guard roster/personnel menu",
+          "Observe replacements inserted at inconsistent positions rather than at the end"
         ],
-        "severity": "medium",
-        "area": "guards",
+        "severity": "low",
+        "area": "guards/roster",
         "sourceMessageIds": [
-          "1522688924831711343",
-          "1522697252588617728",
-          "1522697530431770714",
-          "1522697550967078985",
-          "1522719570597642250",
-          "1522725947361726514",
-          "1522725953627754588",
-          "1522726004953448538",
-          "1522728191020765205",
-          "1522734222610137309"
+          "1523163736951750686",
+          "1523163887443120209",
+          "1523164642887598120",
+          "1524441755980927119",
+          "1524442167014064281",
+          "1524442934072709141",
+          "1524443384255877161",
+          "1524444105684422888"
         ],
         "sourceMessages": [
           {
-            "id": "1522688924831711343",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T19:42:09.872000+00:00",
-            "content": "||Still on 12.6 but Guardsmen follow you through the entire Museum right up until you get to the Von Valancius Estate and its subsequent fight with the Merovian Guardsmen||\nBug report for guards not following you into a DLC area when they definitely should.",
+            "id": "1523163736951750686",
+            "authorId": "212549327816622081",
+            "authorName": "Vesper",
+            "createdAt": "2026-07-05T03:08:53.903000+00:00",
+            "content": "The guards are still getting randomly placed in roster order right?",
             "attachments": [
               {
-                "url": "https://cdn.discordapp.com/attachments/1473232475420491937/1522688924210823380/image.png?ex=6a4a0ad1&is=6a48b951&hm=fa9016cd41cc94d793a59d6522b9d78278448e408a85138e45afe2807379ee87&",
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523163736611749993/image.png?ex=6a506245&is=6a4f10c5&hm=61681bbf929ea66983df71040a5dc0a0a28730196a96967b22b2d732d6ac1a5c&",
                 "filename": "image.png",
                 "contentType": "image/png"
               }
             ]
           },
           {
-            "id": "1522697252588617728",
+            "id": "1523163887443120209",
             "authorId": "292769629653434369",
             "authorName": "Redusk38",
-            "createdAt": "2026-07-03T20:15:15.364000+00:00",
-            "content": "Is that In combat they are not moving or in general that they are not moving into the area?"
+            "createdAt": "2026-07-05T03:09:29.783000+00:00",
+            "content": "yeah the order is still giving trouble"
           },
           {
-            "id": "1522697530431770714",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T20:16:21.607000+00:00",
-            "content": "I think there's a teleport somewhere and they simply don't follow"
+            "id": "1523164642887598120",
+            "authorId": "212549327816622081",
+            "authorName": "Vesper",
+            "createdAt": "2026-07-05T03:12:29.895000+00:00",
+            "content": "Yeah so that part of the issue is at least solved, just the random guard order is the next thing"
           },
           {
-            "id": "1522697550967078985",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T20:16:26.503000+00:00",
-            "content": "They're not in the turn order or anything"
+            "id": "1524441755980927119",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-08T15:47:17.384000+00:00",
+            "content": "yeah it is still out of place"
           },
           {
-            "id": "1522719570597642250",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T21:43:56.392000+00:00",
-            "content": "Update on this, after restarting my game they are now here."
+            "id": "1524442167014064281",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-08T15:48:55.382000+00:00",
+            "content": "",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1524442166393442374/bandicam_2026-07-08_11-48-16-815.mp4?ex=6a506ba7&is=6a4f1a27&hm=26be4e195aa421532a464df5d4b81e743ee4af63a577ae2c7c11bebcf7647858&",
+                "filename": "bandicam_2026-07-08_11-48-16-815.mp4",
+                "contentType": "video/mp4"
+              }
+            ]
           },
           {
-            "id": "1522725947361726514",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T22:09:16.731000+00:00",
-            "content": "Yeah"
+            "id": "1524442934072709141",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-08T15:51:58.263000+00:00",
+            "content": "no.1 in same place as first \n3&4  got slotted between 5&6"
           },
           {
-            "id": "1522725953627754588",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T22:09:18.225000+00:00",
-            "content": "Actually"
+            "id": "1524443384255877161",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-08T15:53:45.595000+00:00",
+            "content": "ideally making all new recruits appear after the last living guard (no.6 in this case) would be easier to keep track of 🤔"
           },
           {
-            "id": "1522726004953448538",
-            "authorId": "830240204064424008",
-            "authorName": "ProvingMedusa",
-            "createdAt": "2026-07-03T22:09:30.462000+00:00",
-            "content": "If you ||loop in the simulation|| they disappear again."
-          },
-          {
-            "id": "1522728191020765205",
-            "authorId": "309504210662195200",
-            "authorName": "undead426",
-            "createdAt": "2026-07-03T22:18:11.661000+00:00",
-            "content": "Yep that was a bug in 12.6 for sure. Havent tried on newest update to see if it got fixed in 13 since not there now"
-          },
-          {
-            "id": "1522734222610137309",
-            "authorId": "309504210662195200",
-            "authorName": "undead426",
-            "createdAt": "2026-07-03T22:42:09.704000+00:00",
-            "content": "Unfortunately that area is act 4 so getting to it on new run is not quick and I have no saves there."
+            "id": "1524444105684422888",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-08T15:56:37.597000+00:00",
+            "content": "When opening the roster It always starts with this  guard v2 despite him being the second to appear, the one to the left is the one from the prologue"
           }
         ],
         "reporters": [
-          "830240204064424008",
-          "309504210662195200"
+          "212549327816622081",
+          "292769629653434369"
         ],
-        "sourceChannelId": "1473232475420491937"
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "merge",
+        "issueNumber": 7,
+        "newInformation": "- Loadout portion is now fixed (replacements default to assault las rifles); only the random roster ordering remains outstanding.\n- Verified with renamed/numbered guards after retiring several via daemon incursion: replacement no.1 stayed in place, while replacements 3 & 4 were slotted between 5 & 6.\n- Additional related quirk: the roster view always opens on the same guard (v2, the second to appear) rather than on the prologue guard."
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:03.602Z"
+    },
+    {
+      "id": "16024195-95c7-4f29-af24-ebcca1b29e09",
+      "discordMessageId": "1524703957006417941",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Replacement guards display incorrect rank/level in personnel menu",
+        "summary": "New replacement guards inherit the dead guard's rank/level visually and show as high rank despite being conscripts.",
+        "description": "After a guard dies, its replacement appears as high rank despite being a conscript (only the lieutenant is supposed to be high rank; the rest should be conscripts). Leveling the new replacements works, but the visual in the guard menu does not update — replacements are still tracked as the last rank of the dead guard rather than reflecting the correct rank/level of the replacement. This also prevents proper verification of the replacement ordering issue.\n\nReported against Bodyguard v0.13.0.3, classified as a visual/gameplay medium bug.",
+        "stepsToReproduce": [
+          "Let a guard die so a replacement conscript spawns",
+          "Open the personnel/guard section",
+          "Observe the replacement showing the dead guard's high rank/level instead of conscript"
+        ],
+        "severity": "medium",
+        "area": "guards/personnel UI",
+        "sourceMessageIds": [
+          "1523378823331188976",
+          "1523379182237913089",
+          "1523379306116546741",
+          "1523390328604856320",
+          "1523390983851606016",
+          "1523397364818378893"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1523378823331188976",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T17:23:34.492000+00:00",
+            "content": "I think this is a new issue \nThey still appear as high rank despite being conscripts",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523378822777405572/image.png?ex=6a5081d6&is=6a4f3056&hm=2bfb26613a732f26b4c02664eb820b20afc26bbcfca65d965658d8f252154963&",
+                "filename": "image.png",
+                "contentType": "image/png"
+              },
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523378823134183444/bandicam_2026-07-05_13-21-26-468.mp4?ex=6a5081d6&is=6a4f3056&hm=f38724d656193a9dd55d3ca78935bb393200cf5d93d0916fe140f135991fcccf&",
+                "filename": "bandicam_2026-07-05_13-21-26-468.mp4",
+                "contentType": "video/mp4"
+              }
+            ]
+          },
+          {
+            "id": "1523379182237913089",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T17:25:00.062000+00:00",
+            "content": "only one that is supposed to have a high rank is the lieutenant \nthe rest should all be conscripts"
+          },
+          {
+            "id": "1523379306116546741",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T17:25:29.597000+00:00",
+            "content": "will try and level the rest a few levels to see if it resets"
+          },
+          {
+            "id": "1523390328604856320",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T18:09:17.563000+00:00",
+            "content": "New replacements are leveling \n\nHowever, the visual on the guard menu is not updating on the replacements. The are still tracked as the last rank of the dead guard and not reflecting the correct rank of the replacement guard."
+          },
+          {
+            "id": "1523390983851606016",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T18:11:53.786000+00:00",
+            "content": "Bodyguard v0.13.0.3\nVisual/gameplay\nmedium bug\n\n* New Replacement for dead guards not displaying correct ranks/level in personnel section"
+          },
+          {
+            "id": "1523397364818378893",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T18:37:15.127000+00:00",
+            "content": "The ordering appears to be changed but can't verify properly as the rank/levels are still retained visually on the new guards",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523397364478377994/bandicam_2026-07-05_14-28-05-404.mp4?ex=6a50931b&is=6a4f419b&hm=005f5e1144acb06a76cf5a9a4213a22ccc49e44f388950e2d0d12b0bf9b6d539&",
+                "filename": "bandicam_2026-07-05_14-28-05-404.mp4",
+                "contentType": "video/mp4"
+              }
+            ]
+          }
+        ],
+        "reporters": [
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
       },
       "action": {
         "kind": "create"
       },
       "state": "pending",
-      "proposedAt": "2026-07-04T08:52:21.490Z"
+      "proposedAt": "2026-07-09T09:09:11.677Z"
+    },
+    {
+      "id": "cf14b031-7395-400d-9c22-0b41cf02fe1e",
+      "discordMessageId": "1524703985876074596",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Krieg gas mask effect does not trigger on guard/ally deaths",
+        "summary": "The gas mask effect that should proc on deaths only counts party members, not guard or other allied deaths.",
+        "description": "Testing confirmed (as undead originally described) that the Krieg gas mask effect does not apply when guards die (or on any allied death) — only party member deaths count. Reporters wished the gas mask worked for the guards. Note: the gas mask is obtained in act 4. This was subsequently fixed in a later build (gas mask now works when guards die).",
+        "severity": "medium",
+        "area": "guards/wargear",
+        "sourceMessageIds": [
+          "1523173800693202975",
+          "1523176266424127590"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1523173800693202975",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:48:53.286000+00:00",
+            "content": "Tested the gas mask it is as undead described effect not applying from guards dying (or any allied death) \n\nOnly party members count"
+          },
+          {
+            "id": "1523176266424127590",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-05T03:58:41.162000+00:00",
+            "content": "Yea wish the gas mask worked for them lol"
+          }
+        ],
+        "reporters": [
+          "292769629653434369",
+          "309504210662195200"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "merge",
+        "issueNumber": 10,
+        "newInformation": "Adds: the effect only counts party member deaths, not guard or any allied deaths. Gas mask is obtained in Act 4. Subsequently FIXED in a later build — gas mask now procs when guards die."
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:18.736Z"
+    },
+    {
+      "id": "729bf042-8643-4fad-8887-75b8b5338cbf",
+      "discordMessageId": "1524704037281468528",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Guards can be damaged (and XP farmed) with single-target attacks outside of combat",
+        "summary": "Guards take damage from some single-target attacks outside of combat, unlike base-game allies, enabling potential XP farming; damage behaviour is inconsistent across weapons.",
+        "description": "While base-game allies appear immune to dying outside combat, the mod's guards take damage from single-target attacks outside of combat. Testing showed damage from plasma overcharge/single shot, sniper single shot/deadshot, and bolter single shot dealt damage, while AoE dealt nothing and the blast pistol surprisingly did nothing. The sniper does damage but does not kill them. Because a player could repeatedly shoot guards with a sniper outside combat to farm XP, the developer planned to add handling to ignore any damage outside of combat.",
+        "stepsToReproduce": [
+          "Outside of combat, attack a guard with single-target attacks (sniper, bolter, plasma)",
+          "Observe damage being applied inconsistently and potential XP gain"
+        ],
+        "severity": "low",
+        "area": "guards",
+        "sourceMessageIds": [
+          "1523164945070690366",
+          "1523165880031379607",
+          "1523165914747637830",
+          "1523167512353833021",
+          "1523169013453164665",
+          "1523169033581494365",
+          "1523171423605227670",
+          "1523171756230053888",
+          "1523171920793702517"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1523164945070690366",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:13:41.941000+00:00",
+            "content": "should check if I can damage guards outside of combat with attacks"
+          },
+          {
+            "id": "1523165880031379607",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:17:24.853000+00:00",
+            "content": "tried the sniper a few more times it is doing damage somehow  🤔"
+          },
+          {
+            "id": "1523165914747637830",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:17:33.130000+00:00",
+            "content": "but not killing them"
+          },
+          {
+            "id": "1523167512353833021",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-05T03:23:54.029000+00:00",
+            "content": "If you want to kill them just get in combat. Im pretty sure allies in base game are immune to targeting outside of combat as well"
+          },
+          {
+            "id": "1523169013453164665",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:29:51.919000+00:00",
+            "content": "This is true although strange that you can kill other npc's like the blind men"
+          },
+          {
+            "id": "1523169033581494365",
+            "authorId": "212549327816622081",
+            "authorName": "Vesper",
+            "createdAt": "2026-07-05T03:29:56.718000+00:00",
+            "content": "I will probably still add a thing into there to tell it to ignore any damage outside of combat, since a player could farm xp by repeatedly shooting them with a sniper outside combat...."
+          },
+          {
+            "id": "1523171423605227670",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:39:26.544000+00:00",
+            "content": "ok so far they are taking damage from single target attacks \ngot damage \nfrom plasma overcharge and single shot,   aoe dealt nothing\nsniper single shot/ deadshot\nbolter single shot"
+          },
+          {
+            "id": "1523171756230053888",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:40:45.848000+00:00",
+            "content": "so something going on there"
+          },
+          {
+            "id": "1523171920793702517",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T03:41:25.083000+00:00",
+            "content": "blast pistol surprisingly didn't do anything"
+          }
+        ],
+        "reporters": [
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:31.130Z"
+    },
+    {
+      "id": "276fc054-0768-4d34-b425-324f217764e0",
+      "discordMessageId": "1524704072421343253",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Guard injuries/traumas cleared on save and reload (temporal void)",
+        "summary": "Loading a save healed guard injuries and cleared traumas, and reloading spawned a replacement conscript clearing all traumas, instead of persisting damage.",
+        "description": "After guards were injured (e.g. by repeated zapping/'deep frying'), loading an autosave on exit spawned a replacement conscript and cleared all traumas. Further testing with the injury option left on showed that making a save and reloading heals the injuries rather than persisting them — an edge case around save/reload. The developer added a fix to stop guards from healing while in the temporal void, after which injuries carried over correctly on reload.",
+        "stepsToReproduce": [
+          "Injure guards (e.g. via the electrical hazard area)",
+          "Save and reload the game",
+          "Observe injuries/traumas being cleared instead of persisting"
+        ],
+        "severity": "medium",
+        "area": "guards/injuries",
+        "sourceMessageIds": [
+          "1523159048336310474",
+          "1523159242020753439",
+          "1523828767267754218",
+          "1523936169954512907",
+          "1523961629467869305",
+          "1524002489647628359"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1523159048336310474",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T02:50:16.050000+00:00",
+            "content": "of the 3 that died was about to reloaded a quick save to test again \nBut loaded the autosave on exit and suddenly it spawned a replacement conscript  and cleared all traumas"
+          },
+          {
+            "id": "1523159242020753439",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T02:51:02.228000+00:00",
+            "content": "???",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523159242163486891/image.png?ex=6a505e16&is=6a4f0c96&hm=1daed09a02d711e8446f39d3de0d45fd1e009d82a2c2e63794eb0062fcbf0999&",
+                "filename": "image.png",
+                "contentType": "image/png"
+              }
+            ]
+          },
+          {
+            "id": "1523828767267754218",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-06T23:11:29.486000+00:00",
+            "content": "however if you make a save and reload injuries will be healed\nbut I don't think this needs too much addressing as there is already the option to turn the damage off completely.",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523828767053578400/image.png?ex=6a502aa1&is=6a4ed921&hm=c7456ee88060f18772f00037566d4e340bd238141326c1d77ccced9c1f573110&",
+                "filename": "image.png",
+                "contentType": "image/png"
+              }
+            ]
+          },
+          {
+            "id": "1523936169954512907",
+            "authorId": "212549327816622081",
+            "authorName": "Vesper",
+            "createdAt": "2026-07-07T06:18:16.282000+00:00",
+            "content": "So for the most part... the injuries are at least persisting with only the slight edge case of a save and reload..."
+          },
+          {
+            "id": "1523961629467869305",
+            "authorId": "212549327816622081",
+            "authorName": "Vesper",
+            "createdAt": "2026-07-07T07:59:26.303000+00:00",
+            "content": "This should stop those guards from healing while in the temporal void!",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523961629178466364/BodyGuard_0_13_0_4.zip?ex=6a50a65e&is=6a4f54de&hm=fbb42e0907e1ae0c826e9efd073a8976ef346ec433dfce162ab46d89541087b5&",
+                "filename": "BodyGuard_0_13_0_4.zip",
+                "contentType": "application/zip"
+              }
+            ]
+          },
+          {
+            "id": "1524002489647628359",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-07T10:41:48.129000+00:00",
+            "content": "Injuries carried over on reload✅"
+          }
+        ],
+        "reporters": [
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:39.252Z"
+    },
+    {
+      "id": "2ef77d6d-2ed7-408a-ab4a-3e1dff94dd66",
+      "discordMessageId": "1524704105673523220",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Setting number of guards to 0 does not work",
+        "summary": "A defect where configuring the guard count to 0 still resulted in guards accompanying the party.",
+        "description": "There was an issue with setting the number of guards to 0. A developer build addressed it, and testing confirmed it working correctly afterward — no guards accompanying the party when the number is set to 0.",
+        "stepsToReproduce": [
+          "Open the mod settings",
+          "Set the number of guards to 0",
+          "Observe guards still accompanying the party (before fix)"
+        ],
+        "severity": "low",
+        "area": "guards/settings",
+        "sourceMessageIds": [
+          "1524020258208219176",
+          "1524125646450855968"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1524020258208219176",
+            "authorId": "212549327816622081",
+            "authorName": "Vesper",
+            "createdAt": "2026-07-07T11:52:24.484000+00:00",
+            "content": "Should fix the setting 0 guards issue",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1524020257520615475/BodyGuard_0_13_0_5.zip?ex=6a503438&is=6a4ee2b8&hm=30ef51b54413897ca7d568e81c04a6f465b34f7f224454eb0e879559f8a9c284&",
+                "filename": "BodyGuard_0_13_0_5.zip",
+                "contentType": "application/zip"
+              }
+            ]
+          },
+          {
+            "id": "1524125646450855968",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-07T18:51:10.999000+00:00",
+            "content": "Working correctly ✅ \nNo guards accompanying when number is set to 0"
+          }
+        ],
+        "reporters": [
+          "212549327816622081",
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "merge",
+        "issueNumber": 12,
+        "newInformation": "A developer build fixed the issue; post-fix testing confirmed no guards accompany the party when the count is set to 0. Also frames the symptom as guards still accompanying the party (behavioral) rather than just the value reverting to 8."
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:47.187Z"
+    },
+    {
+      "id": "de30552f-66df-4445-b51e-fb267cc43a23",
+      "discordMessageId": "1524704124443299860",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "BodyGuard mod missing from in-game modlist (no vendor) on v0.13.0.3",
+        "summary": "After installing v0.13.0.3 via ModFinder, the mod did not appear in the in-game mod menu and no vendor showed up on the ship.",
+        "description": "A user installed the mod via ModFinder and enabled it, but had no vendor on their ship, even after starting a new game. The mod was not showing in the in-game mod menu despite being enabled in ModFinder. Attempts to uninstall v0.13.0.3, install v0.13.0, clear the ModFinder cache, and restart the game did not make it appear. The issue was logged as 'Bodyguard mod missing from installed modlist' for v0.13.0. The user eventually resolved it by doing a clean reinstall of the game and re-downloading the mods.",
+        "stepsToReproduce": [
+          "Install BodyGuard v0.13.0.3 via ModFinder and enable it",
+          "Launch the game",
+          "Observe the mod missing from the in-game mod menu and no vendor on the ship"
+        ],
+        "severity": "medium",
+        "area": "installation/modlist",
+        "sourceMessageIds": [
+          "1523363104191418508",
+          "1523370456185307378",
+          "1523370515866062929",
+          "1523370976463818782",
+          "1523371088531292220",
+          "1523371279657341131",
+          "1523372029317746809",
+          "1523372506990248128",
+          "1523400286243258398"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1523363104191418508",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T16:21:06.757000+00:00",
+            "content": "hi guys\nI m currently trying to play with this mod. I installed this via ModFinder but i have no vendor in my ship. I have try a new game to test but same issue. Any Idea?\nThx in advance"
+          },
+          {
+            "id": "1523370456185307378",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T16:50:19.609000+00:00",
+            "content": "yep",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523370455925526600/Capture_decran_2026-07-05_185003.png?ex=6a507a0b&is=6a4f288b&hm=bb55a0aee1bd6108b231859a0403144f1a2c1255bce4cd8e3b78205d929d0010&",
+                "filename": "Capture_decran_2026-07-05_185003.png",
+                "contentType": "image/png"
+              }
+            ]
+          },
+          {
+            "id": "1523370515866062929",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T16:50:33.838000+00:00",
+            "content": "but it's not in the mod menu in the game"
+          },
+          {
+            "id": "1523370976463818782",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T16:52:23.653000+00:00",
+            "content": "so it is not showing up here? correct?",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523370975859576954/image.png?ex=6a507a87&is=6a4f2907&hm=7f09aa24e4d2b3b0bd57c5621273190c6c3e37625a4e8f4b439bf6d57a2dc1c0&",
+                "filename": "image.png",
+                "contentType": "image/png"
+              }
+            ]
+          },
+          {
+            "id": "1523371088531292220",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T16:52:50.372000+00:00",
+            "content": "exactly"
+          },
+          {
+            "id": "1523371279657341131",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T16:53:35.940000+00:00",
+            "content": "i dont see all my mods in the mod menu anyway 😅"
+          },
+          {
+            "id": "1523372029317746809",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T16:56:34.673000+00:00",
+            "content": "done but i dont see it in RT",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1523372028957163681/Capture_decran_2026-07-05_185526.png?ex=6a507b82&is=6a4f2a02&hm=8296881141e6e5fcdaaae499f952e188327068153aa576ee0c8dcc046f1feb10&",
+                "filename": "Capture_decran_2026-07-05_185526.png",
+                "contentType": "image/webp"
+              }
+            ]
+          },
+          {
+            "id": "1523372506990248128",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-05T16:58:28.559000+00:00",
+            "content": "Bodyguard v0.13.0\n\n* Bodyguard mod missing from installed modlist"
+          },
+          {
+            "id": "1523400286243258398",
+            "authorId": "236856023162290176",
+            "authorName": "PraiseTheSun",
+            "createdAt": "2026-07-05T18:48:51.649000+00:00",
+            "content": "i reinstalled the game clean and reDL my mods and done! all's good"
+          }
+        ],
+        "reporters": [
+          "236856023162290176"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:51.662Z"
+    },
+    {
+      "id": "a45d6be1-5fc0-4c7b-81ac-e854aabb595c",
+      "discordMessageId": "1524704157225848864",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Guards flee the battlefield and cause severe stutter after a bad load",
+        "summary": "On Rykad Minoris the guards ran away from combat (couldn't shoot enemies) and caused heavy game stutter during their turns; resolved after saving and reloading.",
+        "description": "During fights starting on Rykad Minoris, the game stuttered very hard during the guards' turns and the guards were B-lining away, actually leaving the area and unable to shoot enemies. The behaviour carried across multiple fights from the prologue into act 1 (but not the bridge fight). Saving and reloading resolved it — at the ambush fight the guards no longer ran away or stuttered the game, suggesting a bad/weird initial load. Reporter was on version 13.0.6. Could not be reproduced on another user's end.",
+        "stepsToReproduce": [
+          "Load into fights on Rykad Minoris (v13.0.6)",
+          "Observe guards running away from combat and heavy stutter during their turns",
+          "Save and reload to clear the behaviour"
+        ],
+        "severity": "medium",
+        "area": "guards/AI",
+        "sourceMessageIds": [
+          "1524469733016080600",
+          "1524469874125176922",
+          "1524474437989175346",
+          "1524475295082746119",
+          "1524475528210415717",
+          "1524481462014054572",
+          "1524486582785282209",
+          "1524547487036211391",
+          "1524527110247682098",
+          "1524674005649588274"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1524469733016080600",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-08T17:38:27.629000+00:00",
+            "content": "Having a very weird interaction in this fight"
+          },
+          {
+            "id": "1524469874125176922",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-08T17:39:01.272000+00:00",
+            "content": "The game stutters very hard during their turns and for some reason they're just B-Lining it away. Like actually just leaving the area, they can't even shoot the enemies."
+          },
+          {
+            "id": "1524474437989175346",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-08T17:57:09.382000+00:00",
+            "content": "It's consisting into other fights, too. I've landed on Rykad Minoris"
+          },
+          {
+            "id": "1524475295082746119",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-08T18:00:33.729000+00:00",
+            "content": "",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1524475291693617303/GuardsmenRunning.mp4?ex=6a508a80&is=6a4f3900&hm=239c80f0fdd11cb4b963087b3163974b2c232f2c0993498d8c144112e80fccde&",
+                "filename": "GuardsmenRunning.mp4",
+                "contentType": "video/mp4"
+              }
+            ]
+          },
+          {
+            "id": "1524475528210415717",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-08T18:01:29.311000+00:00",
+            "content": "You can skip to 30 seconds after the first guard moves"
+          },
+          {
+            "id": "1524481462014054572",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-08T18:25:04.040000+00:00",
+            "content": "I saved, loaded a save, now I'm at the ambush fight and they're no longer running away nor stuttering my game"
+          },
+          {
+            "id": "1524486582785282209",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-08T18:45:24.927000+00:00",
+            "content": "Sounds like it loaded weird the first time then. Maybe something in code base game went weird"
+          },
+          {
+            "id": "1524547487036211391",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-08T22:47:25.632000+00:00",
+            "content": "Can't replicate this on my end will have to check a fresh save some time."
+          },
+          {
+            "id": "1524527110247682098",
+            "authorId": "98598434902134784",
+            "authorName": "Awaven",
+            "createdAt": "2026-07-08T21:26:27.427000+00:00",
+            "content": "what version are you on?"
+          },
+          {
+            "id": "1524674005649588274",
+            "authorId": "830240204064424008",
+            "authorName": "ProvingMedusa",
+            "createdAt": "2026-07-09T07:10:10.020000+00:00",
+            "content": "I am on the most recent version, 13.0.6"
+          }
+        ],
+        "reporters": [
+          "830240204064424008"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:09:59.542Z"
+    },
+    {
+      "id": "9abf549c-f1dd-46d5-9559-75d83cc528c2",
+      "discordMessageId": "1524704176175579176",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Fleet: large ships/transports cannot move or engage when allied ships are adjacent",
+        "summary": "Having many extra ships breaks transports so they don't move, and large ships skip turns when allied ships are next to them until the blocking ship is removed.",
+        "description": "In fleet battles, having lots of extra allied ships breaks the transports so they don't move (observed in the fight above the tithe planet). Logged for Fleetguard 0.1.1 as: large ships cannot engage in combat when allied ships are next to them and will skip turns until the ship is removed (possibly a base game bug).",
+        "severity": "medium",
+        "area": "fleetguard",
+        "sourceMessageIds": [
+          "1523096087202758809",
+          "1524590742402633899"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1523096087202758809",
+            "authorId": "309504210662195200",
+            "authorName": "undead426",
+            "createdAt": "2026-07-04T22:40:04.946000+00:00",
+            "content": "I just did the fight above tithe planet zooming in and out lots but did notice that having lots of extra ships like breaks the transports so they dont move"
+          },
+          {
+            "id": "1524590742402633899",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-09T01:39:18.515000+00:00",
+            "content": "Fleetguard 0.1.1\nGameplay \n\n* Claymore refusing combat only moving around battlefield \n\n* Large ships cannot engage in combat when allied ships are next to them and will skip turns until ship is removed\n[possibly base game bug]"
+          }
+        ],
+        "reporters": [
+          "309504210662195200",
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:10:04.232Z"
+    },
+    {
+      "id": "979e073a-11ec-42c2-afc9-d5dea34b8980",
+      "discordMessageId": "1524704197797478451",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Fleet: ships that escaped a fleet battle do not return to formation",
+        "summary": "After a fleet battle, ships that escaped the engagement fail to return to formation.",
+        "description": "Logged as a Fleetguard gameplay issue: ships that escaped a fleet battle do not return to formation after the battle.",
+        "severity": "low",
+        "area": "fleetguard",
+        "sourceMessageIds": [
+          "1524614071079538689"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1524614071079538689",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-09T03:12:00.505000+00:00",
+            "content": "* Ship that escaped fleet battle do not return to formation after battle"
+          }
+        ],
+        "reporters": [
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:10:09.199Z"
+    },
+    {
+      "id": "4d34d884-36d3-4caf-83df-66da582468e6",
+      "discordMessageId": "1524704217393139712",
+      "channelId": "1522016010603860141",
+      "bug": {
+        "title": "Guards damage allied (light green) units but not party (dark green) members",
+        "summary": "Guards have no problem hitting allied units (light green) while their attacks are prevented from hitting the party (dark green).",
+        "description": "Observed that the guards will freely spray/hit allied units (shown in light green) but not the player's own party members (dark green), suggesting friendly-fire protection only covers party members and not other allies. Illustrated with a screenshot.",
+        "severity": "low",
+        "area": "guards/targeting",
+        "sourceMessageIds": [
+          "1522954281467117699"
+        ],
+        "sourceMessages": [
+          {
+            "id": "1522954281467117699",
+            "authorId": "292769629653434369",
+            "authorName": "Redusk38",
+            "createdAt": "2026-07-04T13:16:35.824000+00:00",
+            "content": "So they have no problem spraying allied units  (light green) \nbut not our people (dark green) 🤔",
+            "attachments": [
+              {
+                "url": "https://cdn.discordapp.com/attachments/1473232293219926172/1522954280577929399/image.png?ex=6a5047f3&is=6a4ef673&hm=814f779dbd086095ea2dc8df3a62515a0104d85af96e1bf2875b958a88467bda&",
+                "filename": "image.png",
+                "contentType": "image/webp"
+              }
+            ]
+          }
+        ],
+        "reporters": [
+          "292769629653434369"
+        ],
+        "sourceChannelId": "1473232293219926172"
+      },
+      "action": {
+        "kind": "create"
+      },
+      "state": "pending",
+      "proposedAt": "2026-07-09T09:10:13.926Z"
     }
   ]
 }
